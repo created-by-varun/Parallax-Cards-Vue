@@ -1,4 +1,5 @@
-# vue-cards
+# VueJS Parallax Cards Effect
+### Live link: 
 
 ## Project setup
 ```
