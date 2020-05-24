@@ -1,5 +1,5 @@
 # VueJS Parallax Cards Effect
-### Live link: 
+### Live link: https://parallax-cards-vuejs.netlify.app/
 
 ## Project setup
 ```
