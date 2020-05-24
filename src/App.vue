@@ -1,28 +1,50 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <main id="app">
+    <section class="products">
+
+      <Product 
+        v-for="product in products"
+        :key="product.color"
+        :product="product"
+      />
+
+    </section>
+  </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Product from './components/Product.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Product
+  },
+  data () {
+    products:[
+      {
+        title: 'Nike Air Max',
+        color: 'green',
+        bgtext: 'NIKE',
+        src: require('./assets/green-shoe.png')
+      },
+      {
+        title: 'Nike Flex',
+        color: 'blue',
+        bgtext: 'AIR',
+        src: require('./assets/blue-shoe.png')
+      },
+      {
+        title: 'Nike Roche Runs',
+        color: 'pink',
+        bgtext: 'MAX',
+        src: require('./assets/pink-shoe.png')
+      }
+    ]
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
